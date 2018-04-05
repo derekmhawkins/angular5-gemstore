@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { CartModel } from './cart-model';
+import { CartItemModel } from './cart-item-model';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Gem Store';
+
+  cart: CartModel = {
+    totalPrice: 0,
+    totalQuantity: 0,
+    items: []
+  };
 }

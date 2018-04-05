@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { CartModel } from '../cart-model';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   title = "Gem Store"
+
+  @Input() cart: CartModel;
 
   constructor() { }
 

@@ -19,7 +19,10 @@
       <!-- Image Gallery -->
       <!-- Add to Cart Button -->
       <div class="text-center add-to-cart">
-        <button class="btn btn-primary" *ngIf="gem.inventory > 0" (click)="gem.inventory = gem.inventory-1">Add to Cart</button>
+        <button class="btn btn-primary"
+          *ngIf="gem.inventory > 0"
+          (click)="addToCart(gem)"
+          >Add to Cart</button>
         <button class="btn btn-danger" disabled *ngIf="gem.inventory <= 0">Sold Out</button>
       </div>
       <!-- Add to Cart Button -->
